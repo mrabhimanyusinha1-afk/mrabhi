@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhimanyu Sinha - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            accent: '#06b6d4',
+                            glow: 'rgba(6, 182, 212, 0.15)',
+                            dark: '#030712'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #030712;
+            color: #f3f4f6;
+        }
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .glass-panel {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glow-accent {
+            box-shadow: 0 0 35px -5px rgba(6, 182, 212, 0.25);
+        }
+    </style>
+    <script>
+        function handleGalleryImageError(img, altText) {
+            img.onerror = null;
+            img.src = 'https://placehold.co/800x1000/0f172a/06b6d4?text=' + encodeURIComponent(altText);
+        }
+    </script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen selection:bg-cyber-accent selection:text-slate-950">
+
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center font-mono font-bold text-slate-950 text-lg shadow-lg group-hover:scale-105 transition">
+                    AS
+                </div>
+                <div>
+                    <span class="text-base font-bold tracking-tight text-white block">Abhimanyu Sinha</span>
+                    <span class="text-xs font-mono text-cyan-400 block">Class 8th S1 • Dev</span>
+                </div>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-cyan-400 transition">About</a>
+                <a href="#gallery" class="hover:text-cyan-400 transition">Photo Showcase</a>
+                <a href="#hobbies" class="hover:text-cyan-400 transition">Hobbies & Vision</a>
+                <a href="#terminal" class="hover:text-cyan-400 transition">Terminal</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="#contact" class="px-4 py-2 text-xs font-mono font-semibold bg-cyan-500 hover:bg-cyan-400 text-slate-950 rounded-xl transition shadow-lg shadow-cyan-500/20">
+                    <i class="fa-solid fa-paper-plane mr-1.5"></i> Let's Connect
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-24">
+        
+        <!-- Hero Section -->
+        <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Details -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/60 border border-cyan-800/50 text-cyan-400 text-xs font-mono">
+                        <i class="fa-solid fa-circle text-[8px] animate-pulse"></i>
+                        Class 8th S1 Student & Builder
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white">
+                        Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-400">Abhimanyu Sinha</span>
+                    </h1>
+                    
+                    <p class="text-slate-400 text-base sm:text-lg leading-relaxed">
+                        14-year-old passionate coder and creator. Building projects with <span class="text-cyan-400 font-medium">1 Year of Coding</span> and <span class="text-purple-400 font-medium">1.5 Years of Vibe Coding</span> experience. Basketball player, gamer, and technology enthusiast.
+                    </p>
+
+                    <!-- Stats Bar -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2">
+                        <div class="glass-panel p-4 rounded-2xl border border-slate-800">
+                            <span class="text-2xl font-bold font-mono text-cyan-400 block">1 Year</span>
+                            <span class="text-xs text-slate-400">Coding Experience</span>
+                        </div>
+                        <div class="glass-panel p-4 rounded-2xl border border-slate-800">
+                            <span class="text-2xl font-bold font-mono text-purple-400 block">1.5 Years</span>
+                            <span class="text-xs text-slate-400">Vibe Coding Experience</span>
+                        </div>
+                        <div class="glass-panel p-4 rounded-2xl border border-slate-800 col-span-2 sm:col-span-1">
+                            <span class="text-2xl font-bold font-mono text-emerald-400 block">Class 8th S1</span>
+                            <span class="text-xs text-slate-400">Academic Grade</span>
+                        </div>
+                    </div>
+
+                    <!-- Descriptive Image Selector buttons -->
+                    <div class="pt-4 space-y-2">
+                        <div class="text-xs font-mono uppercase tracking-wider text-slate-400">Switch Hero Portrait:</div>
+                        <div class="flex items-center gap-2 flex-wrap">
+                            <button onclick="switchHeroPhoto('me.png', 'Executive Promenade', 'executive')" class="px-3 py-1.5 text-xs font-mono font-semibold rounded-lg bg-cyan-500 text-slate-950 transition">Executive</button>
+                            <button onclick="switchHeroPhoto('goals.png', 'Aviators Goals', 'aviators')" class="px-3 py-1.5 text-xs font-mono font-semibold rounded-lg bg-slate-900 text-slate-300 hover:text-white border border-slate-800 transition">Aviators</button>
+                            <button onclick="switchHeroPhoto('lap.png', 'Desk Aviators', 'desk-aviators')" class="px-3 py-1.5 text-xs font-mono font-semibold rounded-lg bg-slate-900 text-slate-300 hover:text-white border border-slate-800 transition">Desk Aviators</button>
+                            <button onclick="switchHeroPhoto('ChatGPT Image Aug 27, 2026, 07_03_41 PM.png', 'Dubai Skyline', 'skyline')" class="px-3 py-1.5 text-xs font-mono font-semibold rounded-lg bg-slate-900 text-slate-300 hover:text-white border border-slate-800 transition">Skyline</button>
+                            <button onclick="switchHeroPhoto('int.png', 'Interest Setup', 'interest')" class="px-3 py-1.5 text-xs font-mono font-semibold rounded-lg bg-slate-900 text-slate-300 hover:text-white border border-slate-800 transition">Interest</button>
+                            <button onclick="switchHeroPhoto('dream.png', 'Dream Studio', 'dream')" class="px-3 py-1.5 text-xs font-mono font-semibold rounded-lg bg-slate-900 text-slate-300 hover:text-white border border-slate-800 transition">Dream</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Profile Frame -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="w-full max-w-md glass-panel p-4 rounded-3xl glow-accent border border-slate-800">
+                        <div class="relative aspect-[4/5] rounded-2xl overflow-hidden bg-slate-900 border border-slate-800">
+                            <img id="heroAvatar" src="me.png" alt="Abhimanyu Sinha Portrait" onerror="handleGalleryImageError(this, 'Abhimanyu Sinha')" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent p-5">
+                                <span id="heroAvatarBadge" class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-cyan-500/20 text-cyan-400 border border-cyan-500/30">Executive Promenade</span>
+                                <h3 class="text-lg font-bold text-white mt-1.5">Abhimanyu Sinha</h3>
+                                <p class="text-xs text-slate-400">Class 8th S1 • 14 Years Old</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Photo Showcase Gallery -->
+        <section id="gallery" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-slate-900">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest mb-2 block">AI & Professional Showcase</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white">Profile Photo Gallery</h2>
+                <p class="text-slate-400 text-sm mt-2">Explore my professional portraits, aviator looks, and workstation setups.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Look 1: Executive Promenade -->
+                <div class="glass-panel p-4 rounded-2xl flex flex-col justify-between border border-slate-800 group hover:border-cyan-500/50 transition">
+                    <div class="aspect-[4/5] rounded-xl overflow-hidden bg-slate-900 mb-4 relative border border-slate-800">
+                        <img src="me.png" alt="Executive Promenade" onerror="handleGalleryImageError(this, 'Executive Look')" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-md text-[11px] font-mono text-cyan-400 border border-slate-800">Executive</span>
+                    </div>
+                    <div>
+                        <h5 class="text-base font-bold text-white mb-1">Executive Promenade</h5>
+                        <p class="text-xs text-slate-400 mb-4">Formal suit & aviators portrait with waterfront city backdrop.</p>
+                        <button onclick="switchHeroPhoto('me.png', 'Executive Promenade', 'executive')" class="w-full py-2.5 rounded-xl text-xs font-mono font-semibold bg-slate-900 hover:bg-cyan-500 hover:text-slate-950 text-slate-200 border border-slate-800 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-check"></i> Set as Active Profile
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Look 2: Aviators Goals -->
+                <div class="glass-panel p-4 rounded-2xl flex flex-col justify-between border border-slate-800 group hover:border-amber-500/50 transition">
+                    <div class="aspect-[4/5] rounded-xl overflow-hidden bg-slate-900 mb-4 relative border border-slate-800">
+                        <img src="goals.png" alt="Aviators Goals" onerror="handleGalleryImageError(this, 'Aviators Goals')" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-md text-[11px] font-mono text-amber-400 border border-slate-800">Aviators Goals</span>
+                    </div>
+                    <div>
+                        <h5 class="text-base font-bold text-white mb-1">Aviators Goals Workstation</h5>
+                        <p class="text-xs text-slate-400 mb-4">Workstation view featuring goals, achievements, and stylish aviators.</p>
+                        <button onclick="switchHeroPhoto('goals.png', 'Aviators Goals', 'aviators')" class="w-full py-2.5 rounded-xl text-xs font-mono font-semibold bg-slate-900 hover:bg-amber-500 hover:text-slate-950 text-slate-200 border border-slate-800 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-check"></i> Set as Active Profile
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Look 3: Desk Aviators -->
+                <div class="glass-panel p-4 rounded-2xl flex flex-col justify-between border border-slate-800 group hover:border-indigo-500/50 transition">
+                    <div class="aspect-[4/5] rounded-xl overflow-hidden bg-slate-900 mb-4 relative border border-slate-800">
+                        <img src="lap.png" alt="Desk Aviators Coding" onerror="handleGalleryImageError(this, 'Desk Aviators')" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-md text-[11px] font-mono text-indigo-400 border border-slate-800">Desk Aviators</span>
+                    </div>
+                    <div>
+                        <h5 class="text-base font-bold text-white mb-1">Desk Aviators Coding</h5>
+                        <p class="text-xs text-slate-400 mb-4">Coding in style wearing aviators at your dual-monitor workstation.</p>
+                        <button onclick="switchHeroPhoto('lap.png', 'Desk Aviators', 'desk-aviators')" class="w-full py-2.5 rounded-xl text-xs font-mono font-semibold bg-slate-900 hover:bg-indigo-500 hover:text-white text-slate-200 border border-slate-800 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-check"></i> Set as Active Profile
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Look 4: Dubai Skyline -->
+                <div class="glass-panel p-4 rounded-2xl flex flex-col justify-between border border-slate-800 group hover:border-purple-500/50 transition">
+                    <div class="aspect-[4/5] rounded-xl overflow-hidden bg-slate-900 mb-4 relative border border-slate-800">
+                        <img src="ChatGPT Image Aug 27, 2026, 07_03_41 PM.png" alt="Dubai Skyline" onerror="handleGalleryImageError(this, 'Dubai Skyline')" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-md text-[11px] font-mono text-purple-400 border border-slate-800">Skyline</span>
+                    </div>
+                    <div>
+                        <h5 class="text-base font-bold text-white mb-1">Dubai Night Skyline</h5>
+                        <p class="text-xs text-slate-400 mb-4">Formal suit portrait overlooking the illuminated city skyline.</p>
+                        <button onclick="switchHeroPhoto('ChatGPT Image Aug 27, 2026, 07_03_41 PM.png', 'Dubai Skyline', 'skyline')" class="w-full py-2.5 rounded-xl text-xs font-mono font-semibold bg-slate-900 hover:bg-purple-500 hover:text-white text-slate-200 border border-slate-800 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-check"></i> Set as Active Profile
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Look 5: Interest Setup -->
+                <div class="glass-panel p-4 rounded-2xl flex flex-col justify-between border border-slate-800 group hover:border-emerald-500/50 transition">
+                    <div class="aspect-[4/5] rounded-xl overflow-hidden bg-slate-900 mb-4 relative border border-slate-800">
+                        <img src="int.png" alt="Interest Setup" onerror="handleGalleryImageError(this, 'Interest Setup')" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-md text-[11px] font-mono text-emerald-400 border border-slate-800">Interest</span>
+                    </div>
+                    <div>
+                        <h5 class="text-base font-bold text-white mb-1">Code • Create • Innovate</h5>
+                        <p class="text-xs text-slate-400 mb-4">Intense coding session highlighting web design and development passion.</p>
+                        <button onclick="switchHeroPhoto('int.png', 'Interest Setup', 'interest')" class="w-full py-2.5 rounded-xl text-xs font-mono font-semibold bg-slate-900 hover:bg-emerald-500 hover:text-slate-950 text-slate-200 border border-slate-800 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-check"></i> Set as Active Profile
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Look 6: Dream Studio -->
+                <div class="glass-panel p-4 rounded-2xl flex flex-col justify-between border border-slate-800 group hover:border-cyan-500/50 transition">
+                    <div class="aspect-[4/5] rounded-xl overflow-hidden bg-slate-900 mb-4 relative border border-slate-800">
+                        <img src="dream.png" alt="Dream Studio" onerror="handleGalleryImageError(this, 'Dream Studio')" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-md text-[11px] font-mono text-cyan-400 border border-slate-800">Dream Studio</span>
+                    </div>
+                    <div>
+                        <h5 class="text-base font-bold text-white mb-1">Future Billionaire Developer</h5>
+                        <p class="text-xs text-slate-400 mb-4">Ultimate futuristic web developer workspace and vision setup.</p>
+                        <button onclick="switchHeroPhoto('dream.png', 'Dream Studio', 'dream')" class="w-full py-2.5 rounded-xl text-xs font-mono font-semibold bg-slate-900 hover:bg-cyan-500 hover:text-slate-950 text-slate-200 border border-slate-800 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-check"></i> Set as Active Profile
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Hobbies & Interests Section -->
+        <section id="hobbies" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-slate-900">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest mb-2 block">Passions & Free Time</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white">What Drives Me</h2>
+                <p class="text-slate-400 text-sm mt-2">From playing basketball on the court to building worlds in Minecraft and Roblox on PC.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-cyan-500/40 transition">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl mb-4 font-mono">
+                        <i class="fa-solid fa-basketball"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Basketball</h3>
+                    <p class="text-slate-400 text-sm">Playing basketball to stay active, build coordination, and enjoy teamwork.</p>
+                </div>
+
+                <div class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-purple-500/40 transition">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-xl mb-4 font-mono">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Coding & Vibe Coding</h3>
+                    <p class="text-slate-400 text-sm">1 year of coding & 1.5 years of vibe coding experience crafting immersive web apps.</p>
+                </div>
+
+                <div class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-emerald-500/40 transition">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl mb-4 font-mono">
+                        <i class="fa-solid fa-gamepad"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">PC Video Games</h3>
+                    <p class="text-slate-400 text-sm">Playing Roblox and Minecraft on PC, building voxel worlds and exploring gameplay mechanics.</p>
+                </div>
+
+                <div class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-4 font-mono">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Tech Studying</h3>
+                    <p class="text-slate-400 text-sm">Constantly studying cutting-edge technology, AI, and computer science fundamentals.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Terminal -->
+        <section id="terminal" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 shadow-2xl">
+                <div class="bg-slate-900/90 px-4 py-3 flex items-center justify-between border-b border-slate-800">
+                    <div class="flex items-center space-x-2">
+                        <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+                        <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+                        <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
+                    </div>
+                    <span class="text-xs font-mono text-slate-400">abhimanyu@class-8-s1:~</span>
+                    <span></span>
+                </div>
+                <div class="p-6 font-mono text-xs sm:text-sm space-y-3 min-h-[220px] max-h-[320px] overflow-y-auto" id="terminalOutput">
+                    <p class="text-slate-400">Welcome to Abhimanyu Sinha's interactive CLI. Type <span class="text-cyan-400">'help'</span> for commands.</p>
+                </div>
+                <div class="p-4 bg-slate-950 border-t border-slate-800 flex items-center gap-3">
+                    <span class="text-cyan-400 font-mono font-bold">$</span>
+                    <input type="text" id="terminalInput" placeholder="Type 'about', 'skills', 'hobbies', 'contact'..." class="bg-transparent border-none text-white font-mono text-sm focus:outline-none w-full" onkeydown="handleTerminalCommand(event)">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="border-t border-slate-900 bg-slate-950 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl font-bold text-white mb-2">Let's Build Something Amazing</h2>
+            <p class="text-slate-400 text-sm max-w-md mx-auto mb-8">Reach out or connect for web development, coding discussions, or gaming sessions.</p>
+            <div class="flex justify-center gap-4 mb-8">
+                <a href="mailto:abhimanyu@example.com" class="px-6 py-3 rounded-xl bg-slate-900 hover:bg-cyan-500 hover:text-slate-950 text-slate-200 border border-slate-800 font-mono text-xs font-semibold transition flex items-center gap-2">
+                    <i class="fa-solid fa-envelope"></i> abhimanyu@developer.io
+                </a>
+            </div>
+            <p class="text-xs text-slate-500 font-mono">© 2026 Abhimanyu Sinha • Class 8th S1 • All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- Script logic -->
+    <script>
+        function switchHeroPhoto(photoSrc, lookTitle, tagKey) {
+            const heroImg = document.getElementById('heroAvatar');
+            const badge = document.getElementById('heroAvatarBadge');
+            
+            if (heroImg) {
+                heroImg.src = photoSrc;
+            }
+            if (badge) {
+                badge.innerText = lookTitle;
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function handleTerminalCommand(e) {
+            if (e.key === 'Enter') {
+                const input = e.target.value.trim().toLowerCase();
+                const output = document.getElementById('terminalOutput');
+                
+                let response = "";
+                if (input === 'help') {
+                    response = "Commands: <span class='text-cyan-400'>about</span>, <span class='text-cyan-400'>skills</span>, <span class='text-cyan-400'>hobbies</span>, <span class='text-cyan-400'>contact</span>, <span class='text-cyan-400'>clear</span>";
+                } else if (input === 'about') {
+                    response = "Abhimanyu Sinha | 14 Years Old | Class 8th S1 | Web Developer & Vibe Coder.";
+                } else if (input === 'skills') {
+                    response = "Coding: 1 Year | Vibe Coding: 1.5 Years | HTML, CSS, JavaScript, Responsive Design.";
+                } else if (input === 'hobbies') {
+                    response = "Basketball, PC Gaming (Roblox & Minecraft), Tech Studying, Vibe Coding.";
+                } else if (input === 'contact') {
+                    response = "Email: abhimanyu@developer.io | Ready for collaboration!";
+                } else if (input === 'clear') {
+                    output.innerHTML = "";
+                    e.target.value = "";
+                    return;
+                } else {
+                    response = `Unknown command: '${input}'. Type 'help' for available commands.`;
+                }
+
+                output.innerHTML += `<div class='mt-2'><span class='text-cyan-400'>$ ${input}</span><p class='text-slate-300 mt-0.5'>${response}</p></div>`;
+                output.scrollTop = output.scrollHeight;
+                e.target.value = "";
+            }
+        }
+    </script>
+</body>
+</html>
